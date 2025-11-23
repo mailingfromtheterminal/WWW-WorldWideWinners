@@ -1,0 +1,103 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Defensa Planetaria | 1981 Midas</title>
+
+    <!-- Spacekit -->
+    <script src="https://typpo.github.io/spacekit/build/spacekit.js"></script>
+
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="~/css/defensa_planetaria.css" />
+</head>
+<body>
+    <div class="mission-grid">
+        <!-- Área 3D -->
+        <section class="viewport-area">
+            <div class="status-overlay">
+                ESTADO: <span id="mission-status" class="status-indicator">MONITOREO</span>
+            </div>
+            <div id="simulation-container"></div>
+        </section>
+
+        <!-- Panel lateral -->
+        <aside class="telemetry-panel">
+            <header>
+                <h2>Misión: 1981 Midas</h2>
+                <div class="pha-label">PHA: Potentially Hazardous Asteroid</div>
+            </header>
+
+            <section>
+                <h3>Telemetría en Tiempo Real</h3>
+                <dl class="data-list">
+                    <dt>Distancia a la Tierra</dt>
+                    <dd id="dist-earth">Calculando...</dd>
+
+                    <dt>Velocidad Relativa</dt>
+                    <dd id="vel-rel">-- km/s</dd>
+
+                    <dt>Fecha Actual</dt>
+                    <dd id="current-date-text">--</dd>
+                </dl>
+            </section>
+
+            <section>
+                <h3>Estrategia de Mitigación</h3>
+                <div class="control-group">
+                    <div>
+                        <label class="control-label">Modo de misión</label>
+                        <select id="mitigation-select">
+                            <option value="none">-- Solo observación --</option>
+                            <option value="multi-kinetic">Impacto Cinético (50 sondas)</option>
+                        </select>
+                    </div>
+
+                    <div id="deflection-toggle-group" class="toggle-container disabled">
+                        <label class="toggle-label" for="toggle-deflection">
+                            Simular impacto de 50 sondas
+                        </label>
+                        <input type="checkbox" id="toggle-deflection" disabled>
+                    </div>
+                </div>
+
+                <div id="impact-stats" class="impact-stats">
+                    <h3>Resultado del Impacto</h3>
+                    <dl class="data-list">
+                        <dt>ΔV aplicado a Midas</dt>
+                        <dd id="impact-dv">0.00 m/s</dd>
+                        <dt>Cambio de periodo orbital</dt>
+                        <dd id="impact-dt">0.0 días</dd>
+                    </dl>
+                </div>
+            </section>
+
+            <section class="timeline-section">
+                <h3>Cronología de Misión</h3>
+                <span id="slider-date-display" class="date-display">2025-09-24</span>
+
+                <input type="range" id="time-slider" min="0" max="1000" value="0" step="1" />
+
+                <div class="timeline-labels">
+                    <span id="timeline-start-label">2025</span>
+                    <span id="timeline-mid-label">+50 años</span>
+                    <span id="timeline-end-label">+100 años</span>
+                </div>
+
+                <div class="timeline-controls">
+                    <button id="btn-pause-play" class="btn-outline">
+                        PAUSAR
+                    </button>
+                </div>
+            </section>
+        </aside>
+    </div>
+
+    <!-- JS propio -->
+    <script src="~/js/simulacion.js"></script>
+</body>
+</html>
