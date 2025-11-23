@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "HSKh7UyINBo=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\migue\\source\\repos\\WWW\\WWW\\WWW.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\migue\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.22\\microsoft.windowsdesktop.app.ref.8.0.22.nupkg.sha512",
+    "C:\\Users\\migue\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.22\\microsoft.netcore.app.ref.8.0.22.nupkg.sha512",
+    "C:\\Users\\migue\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.22\\microsoft.aspnetcore.app.ref.8.0.22.nupkg.sha512",
+    "C:\\Users\\migue\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.22\\microsoft.netcore.app.host.win-x64.8.0.22.nupkg.sha512"
+  ],
+  "logs": []
+}

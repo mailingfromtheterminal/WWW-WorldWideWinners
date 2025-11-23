@@ -1,0 +1,44 @@
+[
+  {
+    "ContainingType": "WWW.Controllers.SimulationController",
+    "Method": "GetImpactSummary",
+    "RelativePath": "api/impact/summary",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WWW.Controllers.SimulationController",
+    "Method": "GetMidasOrbitPoint",
+    "RelativePath": "api/orbit/midas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "yearsSinceEpoch",
+        "Type": "System.Double",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WWW.Controllers.SimulationController",
+    "Method": "GetMidasDeflectedOrbitPoint",
+    "RelativePath": "api/orbit/midas-deflected",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "yearsSinceEpoch",
+        "Type": "System.Double",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
